@@ -3,7 +3,8 @@
 ## Project Information
 - **Project Type**: Greenfield
 - **Start Date**: 2026-06-14T14:28:29Z
-- **Current Stage**: INCEPTION - Workflow Planning complete (awaiting approval to proceed)
+- **Current Stage**: CONSTRUCTION - NFR Requirements complete (unit: tabispo-web) — awaiting approval
+- **Tech Stack**: React + Vite + TypeScript, plain CSS (CSS Modules, hand-crafted warm theme), localStorage, Google Maps JS API (Places library), .env for API key
 
 ## Execution Plan Summary
 - **Stages to Execute (remaining)**: NFR Requirements, Code Generation, Build and Test
@@ -34,7 +35,7 @@
 
 ### 🟢 CONSTRUCTION PHASE
 - [ ] Functional Design (SKIP)
-- [ ] NFR Requirements (EXECUTE — next)
+- [x] NFR Requirements (EXECUTE)
 - [ ] NFR Design (SKIP)
 - [ ] Infrastructure Design (SKIP)
 - [ ] Code Generation (EXECUTE)
