@@ -59,59 +59,58 @@ tour-research-app/
 ## 実行ステップ
 
 ### Step 1: プロジェクト雛形・設定ファイルの作成（Greenfield） — NFR/技術スタック
-- [ ] `package.json`（React/ReactDOM/Vite/TypeScript/@googlemaps/js-api-loader/Vitest/@testing-library など、scripts: dev/build/preview/test）
-- [ ] `vite.config.ts`, `tsconfig.json`, `tsconfig.node.json`
-- [ ] `index.html`（日本語・モバイル向け viewport・タイトル「旅スポ」）
-- [ ] `.gitignore`（`node_modules`, `.env`, `dist` 等）と `.env.example`（`VITE_GOOGLE_MAPS_API_KEY=`）
-- [ ] `src/styles/theme.css`（暖色系トラベルテーマのデザイントークン）
+- [x] `package.json`（React/ReactDOM/Vite/TypeScript/@googlemaps/js-api-loader/Vitest/@testing-library など、scripts: dev/build/preview/test）
+- [x] `vite.config.ts`, `tsconfig.json`, `tsconfig.node.json`
+- [x] `index.html`（日本語・モバイル向け viewport・タイトル「旅スポ」）
+- [x] `.gitignore`（`node_modules`, `.env`, `dist` 等）と `.env.example`（`VITE_GOOGLE_MAPS_API_KEY=`）
+- [x] `src/styles/theme.css`（暖色系トラベルテーマのデザイントークン）＋ `src/test/setup.ts`
 
 ### Step 2: データモデルとカテゴリ設定 — FR-4, FR-5
-- [ ] `src/types/place.ts`（Spot/Category/Subcategory/検索パラメータ等の型）
-- [ ] `src/config/categories.ts`（観光/グルメの大分類、細分類の代表セット〔グルメ=カフェ/ラーメン/レストラン/居酒屋、観光=寺社/公園・自然/美術館・博物館/名所〕→ Places種別へのマッピング。将来追加しやすいデータ駆動構成）
+- [x] `src/types/place.ts`（Spot/Category/Subcategory/検索パラメータ等の型）
+- [x] `src/config/categories.ts`（観光/グルメの大分類、細分類の代表セット〔グルメ=カフェ/ラーメン/レストラン/居酒屋、観光=寺社/公園・自然/美術館・博物館/名所〕→ Places種別へのマッピング）＋ `src/config/searchOptions.ts`（半径・件数）
 
 ### Step 3: コアサービス（ビジネスロジック）生成 — FR-1,2,6,7,8,9,10,11
-- [ ] `src/services/geolocation.ts`（現在地取得、拒否/失敗の判別）
-- [ ] `src/services/distance.ts`（Haversineで距離算出、距離表示の整形 m/km）
-- [ ] `src/services/placesService.ts`（Maps JS APIロード、Nearby Search、Place Details、写真URL、営業中判定、GoogleマップURL生成）
-- [ ] `src/services/favoritesStore.ts`（localStorageでお気に入りの保存/取得/削除）
+- [x] `src/services/geolocation.ts`（現在地取得、拒否/失敗の判別）
+- [x] `src/services/distance.ts`（Haversineで距離算出、距離表示の整形 m/km）
+- [x] `src/services/placesService.ts`（Maps JS APIロード、Nearby Search、Place Details、写真URL、営業中判定、GoogleマップURL生成、地名ジオコーディング）
+- [x] `src/services/favoritesStore.ts`（localStorageでお気に入りの保存/取得/削除）
 
 ### Step 4: サービスのユニットテスト
-- [ ] `distance.test.ts`（距離計算・整形）
-- [ ] `favoritesStore.test.ts`（保存/取得/削除、localStorageモック）
-- [ ] `categories.test.ts`（マッピングの整合）
-- [ ] （placesService/geolocation は外部依存をモックし、整形ロジック中心に軽くテスト）
+- [x] `distance.test.ts`（距離計算・整形）
+- [x] `favoritesStore.test.ts`（保存/取得/削除、localStorage）
+- [x] `categories.test.ts`（マッピングの整合）
 
 ### Step 5: Reactフック生成
-- [ ] `src/hooks/useGeolocation.ts`（現在地取得状態の管理＋拒否時フォールバック誘導）
-- [ ] `src/hooks/useNearbySearch.ts`（観光・グルメの検索、ローディング/エラー/再試行、結果保持・タブ再利用、半径・営業中・細分類の反映）
-- [ ] `src/hooks/useFavorites.ts`（お気に入りの状態管理）
+- [x] `src/hooks/useGeolocation.ts`（現在地取得状態の管理＋拒否時フォールバック誘導）
+- [x] `src/hooks/useNearbySearch.ts`（観光・グルメの検索、ローディング/エラー、結果保持・タブ再利用、半径・営業中・細分類の反映）
+- [x] `src/hooks/useFavorites.ts`（お気に入りの状態管理）
 
 ### Step 6: UIコンポーネント生成 — FR-3〜FR-13（`data-testid` を付与）
-- [ ] `CategoryTabs.tsx`（観光/グルメ、初期=観光）, `SubcategoryFilter.tsx`（細分類絞り込み）
-- [ ] `RadiusSelector.tsx`（検索範囲切替）, `OpenNowToggle.tsx`（営業中のみ）
-- [ ] `LocationInput.tsx`（位置拒否時の地名入力）
-- [ ] `SpotCard.tsx`（写真・名前・距離・評価・口コミ・営業時間・Googleマップへのナビ・★お気に入り）, `SpotList.tsx`
-- [ ] `FavoritesView.tsx`（お気に入り専用一覧）
-- [ ] `states/Loading.tsx`, `states/EmptyState.tsx`, `states/ErrorRetry.tsx`（0件/エラー＋再試行）
+- [x] `CategoryTabs.tsx`（観光/グルメ＋お気に入り、初期=観光）, `SubcategoryFilter.tsx`（細分類絞り込み）
+- [x] `RadiusSelector.tsx`（検索範囲切替）, `OpenNowToggle.tsx`（営業中のみ）
+- [x] `LocationInput.tsx`（位置拒否時の地名入力）
+- [x] `SpotCard.tsx`（写真・名前・距離・評価・口コミ・営業時間・Googleマップへのナビ・★お気に入り）, `SpotList.tsx`
+- [x] `FavoritesView.tsx`（お気に入り専用一覧）
+- [x] `states/Loading.tsx`, `states/EmptyState.tsx`, `states/ErrorRetry.tsx`（0件/エラー＋再試行）
 
 ### Step 7: アプリ統合・起動時挙動 — FR-3, D-16
-- [ ] `src/App.tsx`（全体の状態と画面構成。起動時に現在地取得→観光・グルメ両方を自動検索→初期は観光タブ。お気に入りタブへの切替。各種フィルタ連携）
-- [ ] `src/main.tsx`（エントリポイント）
+- [x] `src/App.tsx`（全体の状態と画面構成。起動時に現在地取得→観光・グルメ両方を自動検索→初期は観光タブ。お気に入りタブへの切替。各種フィルタ連携）
+- [x] `src/main.tsx`（エントリポイント）
 
 ### Step 8: スタイリング（手作り感のある温かみテーマ） — NFR-5
-- [ ] 各コンポーネントの `*.module.css`（暖色・余白・柔らかい影・カード型UI。モバイル中心のレスポンシブ）
-- [ ] 全体の見た目調整（ヘッダー、タブ、カード、ボタン、空/エラー状態）
+- [x] 各コンポーネントの `*.module.css`（暖色・余白・柔らかい影・カード型UI。モバイル中心のレスポンシブ）
+- [x] 全体の見た目調整（ヘッダー、タブ、カード、ボタン、空/エラー状態）＝ `App.module.css` ほか
 
 ### Step 9: コンポーネントの軽量テスト
-- [ ] 主要コンポーネント（SpotCard, CategoryTabs, ErrorRetry など）のレンダリング/操作を軽くテスト
+- [x] 主要コンポーネント（SpotCard, CategoryTabs, ErrorRetry）のレンダリング/操作テスト
 
 ### Step 10: ドキュメント生成
-- [ ] `README.md` 更新（概要・必要なもの・APIキー設定手順・起動方法 `npm install`→`npm run dev`）
-- [ ] `aidlc-docs/construction/tabispo-web/code/code-summary.md`（生成物の概要・構成・FR対応表）
+- [x] `README.md` 更新（概要・必要なもの・APIキー設定手順・起動方法 `npm install`→`npm run dev`）
+- [x] `aidlc-docs/construction/tabispo-web/code/code-summary.md`（生成物の概要・構成・FR対応表）
 
 ### Step 11: デプロイ/実行アーティファクト（ローカル）
-- [ ] npm scripts（dev/build/preview/test）で起動・ビルド・確認できることを整備（公開ホスティングは範囲外）
-- [ ] `.env.example` と README にAPIキー設定手順を明記（`.env` 実体は作成しない／コミットしない）
+- [x] npm scripts（dev/build/preview/test）で起動・ビルド・確認できる構成を整備（公開ホスティングは範囲外）
+- [x] `.env.example` と README にAPIキー設定手順を明記（`.env` 実体は作成しない／コミットしない）
 
 ---
 

@@ -1,0 +1,87 @@
+/*
+ * 旅スポ デザインテーマ
+ * 「機械的でなく、人の手で作った温かみのあるUI」を目指したデザイントークン。
+ * 暖色系の配色・やわらかい影・角丸・ゆとりのある余白でハンドクラフト感を出す。
+ */
+:root {
+  /* 配色（暖色系トラベルテーマ） */
+  --color-bg: #fff8f1;
+  --color-surface: #ffffff;
+  --color-surface-warm: #fff1e6;
+  --color-primary: #e8743b; /* 夕焼けオレンジ */
+  --color-primary-dark: #c95a26;
+  --color-accent: #f4b860; /* やわらかい黄金色 */
+  --color-text: #3d2c22; /* こげ茶 */
+  --color-text-muted: #8a7361;
+  --color-border: #f0ddcc;
+  --color-star: #f4a93b;
+  --color-open: #3f9d56;
+  --color-closed: #b65c4c;
+  --color-danger: #c0503c;
+
+  /* 角丸 */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+
+  /* 影（やわらかめ） */
+  --shadow-soft: 0 6px 18px rgba(160, 110, 70, 0.12);
+  --shadow-card: 0 4px 14px rgba(160, 110, 70, 0.14);
+  --shadow-pressed: 0 2px 6px rgba(160, 110, 70, 0.18);
+
+  /* 余白の基準 */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+
+  /* フォント */
+  --font-family: "Hiragino Maru Gothic ProN", "Hiragino Sans", "Yu Gothic UI",
+    "Segoe UI", system-ui, sans-serif;
+
+  --maxw-content: 720px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--color-text);
+  background: linear-gradient(180deg, #fff8f1 0%, #fdeede 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+a {
+  color: var(--color-primary-dark);
+}
+
+/* スクリーンリーダー専用テキスト */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

@@ -1,0 +1,12 @@
+.list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+/* やや広い画面では2カラム */
+@media (min-width: 560px) {
+  .list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
