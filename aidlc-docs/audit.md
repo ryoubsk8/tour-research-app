@@ -79,3 +79,20 @@
 **Context**: CONSTRUCTION - NFR Requirements complete; awaiting approval to proceed to Code Generation
 
 ---
+
+## NFR Requirements - Approval
+**Timestamp**: 2026-06-14T18:36:45Z
+**AI Prompt**: "Continue to Next Stage — approve NFR requirements and proceed to Code Generation?"
+**User Response**: "回答を承認します。"
+**Status**: Approved
+**Context**: NFR Requirements approved. Marked complete in aidlc-state.md. Proceeding to CONSTRUCTION - Code Generation Part 1 (Planning) for unit tabispo-web.
+
+---
+
+## Code Generation Part 1 (Planning) - Approval Prompt
+**Timestamp**: 2026-06-14T18:36:45Z
+**AI Prompt**: "Created tabispo-web-code-generation-plan.md (11 steps: project scaffold, types/categories, core services, service tests, hooks, UI components, app integration/launch behavior, styling, component tests, docs, local run artifacts). Approve this code generation plan to proceed to Part 2 (Generation)?"
+**Context**: CONSTRUCTION - Code Generation Part 1; awaiting plan approval before generating code
+**AI Response**: "Awaiting user approval of code generation plan."
+
+---

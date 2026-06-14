@@ -3,7 +3,7 @@
 ## Project Information
 - **Project Type**: Greenfield
 - **Start Date**: 2026-06-14T14:28:29Z
-- **Current Stage**: CONSTRUCTION - NFR Requirements complete (unit: tabispo-web) — awaiting approval
+- **Current Stage**: CONSTRUCTION - Code Generation Part 1: Planning (unit: tabispo-web) — awaiting plan approval
 - **Tech Stack**: React + Vite + TypeScript, plain CSS (CSS Modules, hand-crafted warm theme), localStorage, Google Maps JS API (Places library), .env for API key
 
 ## Execution Plan Summary
