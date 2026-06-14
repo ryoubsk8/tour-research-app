@@ -30,5 +30,5 @@
 ## Extension Configuration
 | Extension | Enabled | Decided At |
 |---|---|---|
-| Security Baseline | TBD | Requirements Analysis |
-| Property-Based Testing | TBD | Requirements Analysis |
+| Security Baseline | No | Requirements Analysis |
+| Property-Based Testing | No | Requirements Analysis |
