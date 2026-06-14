@@ -3,7 +3,12 @@
 ## Project Information
 - **Project Type**: Greenfield
 - **Start Date**: 2026-06-14T14:28:29Z
-- **Current Stage**: INCEPTION - Requirements Analysis complete (awaiting approval to proceed)
+- **Current Stage**: INCEPTION - Workflow Planning complete (awaiting approval to proceed)
+
+## Execution Plan Summary
+- **Stages to Execute (remaining)**: NFR Requirements, Code Generation, Build and Test
+- **Stages to Skip**: User Stories (user choice/prototype), Application Design (single small frontend), Units Generation (single unit), Functional Design (folded into code-gen planning), NFR Design (minimal patterns), Infrastructure Design (local-only)
+- **Next Stage**: CONSTRUCTION - NFR Requirements
 
 ## Workspace State
 - **Existing Code**: No (empty README.md + empty git repo only)
@@ -22,10 +27,21 @@
 ### 🔵 INCEPTION PHASE
 - [x] Workspace Detection
 - [x] Requirements Analysis
-- [ ] User Stories
-- [ ] Workflow Planning
-- [ ] Application Design
-- [ ] Units Generation
+- [x] User Stories (SKIPPED)
+- [x] Workflow Planning
+- [ ] Application Design (SKIP)
+- [ ] Units Generation (SKIP)
+
+### 🟢 CONSTRUCTION PHASE
+- [ ] Functional Design (SKIP)
+- [ ] NFR Requirements (EXECUTE — next)
+- [ ] NFR Design (SKIP)
+- [ ] Infrastructure Design (SKIP)
+- [ ] Code Generation (EXECUTE)
+- [ ] Build and Test (EXECUTE)
+
+### 🟡 OPERATIONS PHASE
+- [ ] Operations (PLACEHOLDER)
 
 ## Extension Configuration
 | Extension | Enabled | Decided At |
