@@ -130,3 +130,11 @@
 **Context**: CONSTRUCTION - Build and Test complete; MVP ready
 
 ---
+
+## Operations - Deployment Request (Vercel)
+**Timestamp**: 2026-06-16T16:55:28Z
+**User Input**: "このアプリを携帯で使ってみようと思います。一度アプリをWeb上に公開することは可能ですか？" + chose hosting = Vercel (GitHub連携) via question.
+**AI Response**: "Public hosting was originally out-of-scope (D-15) but added for mobile use. Confirmed .env/node_modules/dist are gitignored (no key leak). Found existing GitHub remote 'tour-research-app' → github.com/ryoubsk8/tour-research-app with 9 unpushed local commits. Created aidlc-docs/operations/deployment-vercel.md (push → Vercel import → set VITE_GOOGLE_MAPS_API_KEY env var → restrict API key by HTTP referrer/API/budget → open on phone) and added a 公開（デプロイ）section to README. No app code changes needed (Vercel auto-detects Vite). Did not push on user's behalf (requires their GitHub auth)."
+**Context**: OPERATIONS - Deployment guide prepared; awaiting user to push & import
+
+---

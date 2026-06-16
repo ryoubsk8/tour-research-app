@@ -76,6 +76,17 @@ src/
 └── styles/theme.css        デザインテーマ（暖色系トラベルテーマ）
 ```
 
+## 公開（デプロイ）してスマホで使う
+Vercel に公開すると、自動でHTTPSになり**スマホでも位置情報が使えます**。コード変更は不要です。
+
+1. **GitHubへpush**: `git push`（リポジトリは設定済み）
+2. **Vercelで取り込み**: vercel.com → Add New Project → リポジトリをImport（Framework=Vite を自動検出）
+3. **環境変数**を設定: `VITE_GOOGLE_MAPS_API_KEY`（リポジトリには載せない）
+4. **Deploy** → `https://<プロジェクト名>.vercel.app` が発行される
+5. **Google CloudでAPIキー制限**（必須）: HTTPリファラーに公開ドメインを追加、対象APIを3つに限定、予算上限を設定
+
+詳しい手順は `aidlc-docs/operations/deployment-vercel.md` を参照してください。
+
 ## メモ
 - お気に入りはブラウザの localStorage に保存されます（端末内のみ・別端末と共有はしません）。
 - 公開ホスティングは現在のスコープ外です（ローカル動作のMVP）。

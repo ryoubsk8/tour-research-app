@@ -3,7 +3,7 @@
 ## Project Information
 - **Project Type**: Greenfield
 - **Start Date**: 2026-06-14T14:28:29Z
-- **Current Stage**: CONSTRUCTION - Build and Test complete — MVP ready (Operations is placeholder)
+- **Current Stage**: OPERATIONS - Deployment (Vercel) — guide prepared; user to push & import. (Note: public hosting was originally out-of-scope; added for mobile use.)
 - **Tech Stack**: React + Vite + TypeScript, plain CSS (CSS Modules, hand-crafted warm theme), localStorage, Google Maps JS API (Places library), .env for API key
 
 ## Execution Plan Summary
