@@ -111,3 +111,22 @@
 **Context**: CONSTRUCTION - Code Generation complete (unit: tabispo-web); awaiting approval to proceed to Build and Test
 
 ---
+
+## Code Generation - Approval / Build and Test Stage
+**Timestamp**: 2026-06-14T23:10:34Z
+**User Input**: "承認します。"
+**Build Status**: Success (tsc --noEmit + vite build; dist artifacts produced, ~160KB JS gzip ~53KB)
+**Test Status**: Pass (23/23 across 6 files via Vitest + Testing Library)
+**Fixes during Build & Test**:
+- Build config: composite tsconfig.node.json could not disable emit under `tsc -b`; switched build to `tsc --noEmit && vite build`, merged vite.config.ts into root tsconfig include, removed tsconfig.node.json.
+- Test: SpotCard distance assertion changed from exact 'getByText("850m")' to regex match (rendered text is "📍 850m").
+**Files Generated**:
+- build-instructions.md
+- unit-test-instructions.md
+- integration-test-instructions.md
+- performance-test-instructions.md
+- build-and-test-summary.md
+**AI Response**: "Ran npm install, npm test (23/23 pass), npm run build (success). Generated build-and-test docs. Marked Build and Test complete in aidlc-state.md. Operations phase is placeholder. Presenting Build and Test completion gate."
+**Context**: CONSTRUCTION - Build and Test complete; MVP ready
+
+---

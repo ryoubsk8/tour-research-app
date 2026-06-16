@@ -19,7 +19,7 @@ describe('SpotCard', () => {
     render(<SpotCard spot={spot} isFavorite={false} onToggleFavorite={() => {}} />);
     expect(screen.getByText('清水寺')).toBeInTheDocument();
     expect(screen.getByTestId('rating')).toHaveTextContent('4.5');
-    expect(screen.getByText('850m')).toBeInTheDocument();
+    expect(screen.getByText(/850m/)).toBeInTheDocument();
     expect(screen.getByText('営業中')).toBeInTheDocument();
   });
 
